@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('page/landing_page/login');
 });
+
+Route::get('/home', function () {
+    return view('page/landing_page/home');
+});
