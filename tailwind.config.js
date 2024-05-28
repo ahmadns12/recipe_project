@@ -6,7 +6,13 @@ export default {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jomhuria: ['Jomhuria','serif'],
+        jockey_one: ['Jockey One','serif'],
+        inter: ['Inter','serif'],
+      }
+    },
   },
   plugins: [],
 }
