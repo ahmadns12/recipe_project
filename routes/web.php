@@ -24,3 +24,7 @@ Route::get('/login', function () {
 Route::get('/home', function () {
     return view('page/landing_page/home');
 });
+
+Route::get('/recipe', function () {
+    return view('page/recipe_page/recipe');
+});

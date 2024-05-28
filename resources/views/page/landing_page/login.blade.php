@@ -9,7 +9,10 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-[#DEE4B8]">
+    
+    {{-- HEADER NAVBAR --}}
     @include('components/header')
+    {{-- HEADER NAVBAR-END --}}
 
     {{-- SECTION-1 SIGN IN --}}
     <section class="py-6 px-4">
