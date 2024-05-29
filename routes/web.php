@@ -28,3 +28,7 @@ Route::get('/home', function () {
 Route::get('/recipe', function () {
     return view('page/recipe_page/recipe');
 });
+
+Route::get('/recipe/dessert', function () {
+    return view('page/recipe_page/recipe_desert');
+});
