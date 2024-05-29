@@ -92,7 +92,7 @@
         {{-- HEADER-END --}}
         
         {{-- SECTION-1 ITEM WITH CATEGORY --}}
-        <section class="py-6 mt-12">
+        <section class="py-6 pt-20">
             <div class="flex w-full space-x-8 px-32">
                 <div class="w-1/2 h-[28rem] no-scrollbar overflow-y-auto">
                     <div class="grid grid-cols-2 gap-x-44 gap-y-20 mt-12">
