@@ -73,6 +73,36 @@ class RecipeController extends Controller
         return view('page.recipe_page.recipe')->with('recipes', $recipes);
     }
 
+    function recipe_dessert_page(){
+        $recipes = Recipe::where('kategori','dessert')->get();
+
+        return view('page.recipe_page.recipe_desert')->with('recipes', $recipes);
+    }
+
+    function recipe_traditional_page(){
+        $recipes = Recipe::where('kategori','traditional')->get();
+
+        return view('page.recipe_page.recipe_traditional')->with('recipes', $recipes);
+    }
+
+    function recipe_international_page(){
+        $recipes = Recipe::where('kategori','international')->get();
+
+        return view('page.recipe_page.recipe_international')->with('recipes', $recipes);
+    }
+
+    function recipe_drink_page(){
+        $recipes = Recipe::where('kategori','drink')->get();
+
+        return view('page.recipe_page.recipe_drink')->with('recipes', $recipes);
+    }
+
+    function recipe_cake_page(){
+        $recipes = Recipe::where('kategori','cake')->get();
+
+        return view('page.recipe_page.recipe_cake')->with('recipes', $recipes);
+    }
+
     //UPLOAD RECIPE
     function upload_page(){
         return view('page.landing_page.unggah_resep');

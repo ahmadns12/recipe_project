@@ -69,5 +69,81 @@ class RecipeSeeder extends Seeder
                                     ',
             'id_user' => '1'
         ]);
+
+        DB::table('recipes')->insert([
+            'nama' => 'Dimsum',
+            'deskripsi' => 'Hidangan Tiongkok yang terdiri dari berbagai macam kudapan kecil.',
+            'kategori' => 'international',
+            'gambar_1' => 'dimsum1.png',
+            'gambar_2' => 'dimsum2.png',
+            'cara_membuat' => 'Masukkan daging ayam, udang, dan bawang putih dalam blender atau food processor, giling kasar.
+                                | Selanjutnya, siapkan juga serutan wortel pada wadah, sisihkan.
+                                | Pindahkan adonan ke wadah, lalu campurkan semua bahan dengan telur. Lalu, uleni hingga semua bahan tercampur rata.
+                                | Masukan tepung tapioka, aduk sampai tercampur rata.
+                                | Siapkan kulit pangsit, masukkan adonan dan beri topping wortel parut.
+                                | Siapkan kukusan, oles bagian dasarnya dengan minyak goreng.
+                                ',
+            'bahan_bahan' => '500 gram ayam fillet (gunakan bagian paha).
+                                | 150-200 gram udang, kupas kulitnya.
+                                | 2-3 sdm tepung tapioka.
+                                | 1 butir telur.
+                                | 2 batang daun bawang, iris tipis.
+                                | 1 sdm minyak wijen.
+                                | 1 sdt gula pasir.
+                                | 2 sdm saus tiram.
+                                | 1 sdt garam atau kecap asin.
+                                ',
+            'id_user' => '1'
+        ]);
+
+        DB::table('recipes')->insert([
+            'nama' => 'Bandrek',
+            'deskripsi' => 'Minuman tradisional  menyehatkan, terbuat dari campuran jahe, gula aren.',
+            'kategori' => 'drink',
+            'gambar_1' => 'bandrek1.png',
+            'gambar_2' => 'bandrek2.png',
+            'cara_membuat' => 'Bakar jahe di atas api kompor. Setelah sudah berwarna coklat sedikit, memarkan dan kupas kulit jahe hingga bersih
+                                | Siapkan panci berisi air dan masukan jahe, gula pasir, gula merah yang sudah diiris tipis, cengkeh, kayu manis, dan juga daun pandan yang diikat.
+                                | Masak di atas api kecil hingga mendidih dan warna air berubah jadi kecokelatan. Pastikan aroma rempah sudah tercium sedap
+                                | Setelah mendidih, angkat dan saring. Jika masih kurang jernih, ulangi proses menyaring hingga 2 kali.
+                                | Siap dihidangkan selagi hangat.
+                                ',
+            'bahan_bahan' => '500 ml air
+                                | 80 gr jahe
+                                | 75 gr gula merah
+                                | 2 sdm gula pasir
+                                | 4 butir cengkeh
+                                | 1 batang kayu manis
+                                | 2 lembar daun pandan
+                                | Garam secukupnya
+                                ',
+            'id_user' => '1'
+        ]);
+
+        DB::table('recipes')->insert([
+            'nama' => 'Kue Lapis',
+            'deskripsi' => 'Ciptakan kue lapis yang menggoda dan beri warna-warni cerah pada adonan.',
+            'kategori' => 'cake',
+            'gambar_1' => 'kuelapis1.png',
+            'gambar_2' => 'kuelapis2.png',
+            'cara_membuat' => 'Campur gula pasir dan santan.
+                                | Tuangkan tepung beras, tapioka, dan garam.
+                                | Tambahkan susu kental manis, aduk sampai rata.
+                                | Saring adonan
+                                | Bagi adonan menjadi 2, beri pasta pandan sebagia
+                                | Tuang dalam loyang bergantian dengan jeda 5 menit atau sampai matang satu sisi
+                                | Siap di sajikan.
+                                ',
+            'bahan_bahan' => '200 gr tepung beras
+                                | 100 gr tepung tapioka
+                                | 1/2 sdt pasta pandan
+                                | 1/2 sdt garam
+                                | 850 ml santan
+                                | 100 ml susu kental manis
+                                | 120 gr gula pasir
+                                | minyak, secukupnya
+                                ',
+            'id_user' => '1'
+        ]);
     }
 }

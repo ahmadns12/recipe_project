@@ -10,45 +10,29 @@
 </head>
 <body class="bg-[#DEE4B8]">
 
-    {{-- MODAL DETAIL --}}
-    <div class="hidden w-full h-full fixed flex justify-center items-center z-10">
+     {{-- MODAL DETAIL --}}
+     <div id="recipeModal" class="hidden w-full h-full fixed flex justify-center items-center z-10">
         <div class="w-[75%] bg-cover px-8 py-8" style="background-image: url('{{asset('img/bg-popup.png')}}')">
-            <div class="grid grid-cols-4 justify-center">
+            <div class="grid grid-cols-4 gap-4 justify-center">
                 <div class="flex-col justify-center items-center pt-6">
-                    <img class="w-40 h-40 object-cover" src="{{asset('img/popup_item.png')}}" alt="">
-                    <img class="mt-12 w-40 h-40 object-cover" src="{{asset('img/popup_item2.png')}}" alt="">
+                    <img id="gambarSatu" class="w-40 h-40 object-cover" src="" alt="">
+                    <img id="gambarDua" class="mt-12 w-40 h-40 object-cover font-jockey_one" src="" alt="Gambar Tidak Tersedia">
                 </div>
                 <div class="flex-col">
                     <div class="[text-shadow:_0_1px_0_rgb(0_0_0_/_60%)] text-xl text-black font-jockey_one">
                         BAHAN-BAHAN
                     </div>
                     <div class="mt-1 pl-3">
-                        <ol class="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)] list-decimal font-jockey_one text-white">
-                            <li>500 gr daging ikan tenggiri</li>
-                            <li>600 gr tepung tapioka</li>
-                            <li>300 ml air</li>
-                            <li>1 bongkol bawang putih</li>
-                            <li>2 butir putih telur</li>
-                            <li>3 sdm gula pasir</li>
-                            <li>40 gr garam</li>
-                            <li>20 gr micin</li>
-                            <li>1 butir telur kocok </li>
+                        <ol id="bahanBahan" class="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)] list-decimal font-jockey_one text-white">
+                            
                         </ol>
                     </div>
-                    <div class="[text-shadow:_0_1px_0_rgb(0_0_0_/_60%)] mt-4 text-xl text-black font-jockey_one">
-                        BAHAN SAUS CUKO
+                    <div id="namaBahanBahanLain" class="uppercase [text-shadow:_0_1px_0_rgb(0_0_0_/_60%)] mt-4 text-xl text-black font-jockey_one">
+                        
                     </div>
                     <div class="mt-1 pl-3">
-                        <ol class="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)] list-decimal font-jockey_one text-white">
-                            <li>500 gr daging ikan tenggiri</li>
-                            <li>600 gr tepung tapioka</li>
-                            <li>300 ml air</li>
-                            <li>1 bongkol bawang putih</li>
-                            <li>2 butir putih telur</li>
-                            <li>3 sdm gula pasir</li>
-                            <li>40 gr garam</li>
-                            <li>20 gr micin</li>
-                            <li>1 butir telur kocok </li>
+                        <ol id="bahanBahanLain" class="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)] list-decimal font-jockey_one text-white">
+                            
                         </ol>
                     </div>
                 </div>
@@ -57,17 +41,11 @@
                         CARA MEMBUAT
                     </div>
                     <div class="mt-1 pl-3">
-                        <ol class="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)] list-decimal font-jockey_one text-white">
-                            <li>Buat saus cukonya. Haluskan bawang putih dan cabai beri, sedikit air. Masukkan ke dalam panci semua bahan saus kecuali gula pasir dan garam. Masak sampai gula merah larut.</li>
-                            <li>Masukkan gula dan garam. Masak dengan api kecil selama 15 menit. Angkat dan saring.</li>
-                            <li>Blender ikan sampai halus. Masukkan ke dalam baskom aduk dengan 300 ml air.</li>
-                            <li>Blender bawang putih dengan sedikit air. Masukkan ke adonan ikan. Tambahkan juga putih telur dan semua bumbunya.</li>
-                            <li>Aduk sampai rata. Tambahkan tepung tapiokanya sedikit demi sedikit sambil diaduk sampai rata.</li>
-                            <li>Bentuk adonan memanjang dengan melumuri papan dan tangan dengan tepung tapioka.</li>
-                            <li>Rebus sampai mengapung. Tambahkan bawang merah dan lada pada separuh adonan. Kemudian saya goreng.</li>
+                        <ol id="caraMembuat" class="[text-shadow:_0_2px_0_rgb(0_0_0_/_60%)] list-decimal font-jockey_one text-white">
+                            
                         </ol>
                     </div>
-                    <div class="flex justify-end items-end mt-20">
+                    <div class="flex justify-end items-end mt-20 cursor-pointer" onclick="closeModal()">
                         <i>
                             <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect width="37" height="37" fill="url(#pattern0_441_100)"/>
@@ -86,7 +64,7 @@
     </div>
     {{-- MODAL DETAIL-END --}}
 
-    {{-- <div id="blurDiv" class="blur-sm"> --}}
+    <div id="blurDiv" class="">
         {{-- HEADER --}}
         @include('components/header_2')
         {{-- HEADER-END --}}
@@ -96,27 +74,43 @@
             <div class="flex w-full space-x-8 px-32">
                 <div class="w-1/2 h-[28rem] no-scrollbar overflow-y-auto">
                     <div class="grid grid-cols-2 gap-x-44 gap-y-20 mt-16">
+                        @foreach ($recipes as $recipe)
+                            @php
+                                $bahan_bahan_array = explode('|', $recipe->bahan_bahan);
+                                $bahan_bahan_json = json_encode($bahan_bahan_array);
 
-                        <a href="">
-                            <div class="flex-col items-center justify-center bg-[#A3AE73] rounded-[2rem] py-2 px-4">
+                                $cara_membuat_array = explode('|', $recipe->cara_membuat);
+                                $cara_membuat_json = json_encode($cara_membuat_array);
+
+                                $bahan_bahan_lain_array = !empty($recipe->bahan_bahan_lain) ? explode('|', $recipe->bahan_bahan_lain) : [];
+                                $bahan_bahan_lain_json = json_encode($bahan_bahan_lain_array);
+
+                            @endphp
+
+                            <div class="flex-col items-center justify-center bg-[#A3AE73] rounded-[2rem] py-2 px-4 cursor-pointer"
+                                onclick="openModal({{ $recipe }})"
+                                gambar-satu="{{ $recipe->gambar_1 }}"
+                                gambar-dua="{{ $recipe->gambar_2 }}"
+                                data-bahan="{{ $bahan_bahan_json }}"
+                                data-namabahanlain="{{ $recipe->nama_bahan_bahan_lain }}"
+                                data-bahanlain="{{ $bahan_bahan_lain_json }}" 
+                                data-caramembuat="{{ $cara_membuat_json }}"
+                                >
                                 <div class="flex justify-center items-center">
-                                    <img class="mt-[-4rem] rounded-xl overflow-hidden outline outline-[#A3AE73] h-28 w-28 object-cover " src="{{asset('img/recipe_item.png')}}" alt="">
+                                    <img class="mt-[-4rem] rounded-xl overflow-hidden outline outline-[#A3AE73] h-28 w-28 object-cover " src="{{asset('img/'.$recipe->gambar_1)}}" alt="">
                                 </div>
                                 
                                 <div class="mt-1 text-2xl font-jockey_one text-white flex justify-center items-center">
-                                    Pie Buah
+                                    {{$recipe->nama}}
                                 </div>
                                 
                                 <div class="pt-2 pb-4">
                                     <div class="font-jockey_one text-sm text-white text-center line-clamp-3">
-                                        Sajian manis dengan
-                                        potongan buah di atas
-                                        pie kecil yang renyahaskjdaksjdkasjdkj.
+                                        {{$recipe->deskripsi}}
                                     </div>
                                 </div>
                             </div>
-                        </a>
-
+                        @endforeach
                     </div>
                 </div>
                 <div class="w-1/2">
@@ -137,5 +131,66 @@
         {{-- FOOTER NAVBAR-END --}}
     </div>
     
+    <script>
+        // Fungsi untuk membuka modal
+        function openModal(recipe) {
+            const button = event.currentTarget;
+            const bahanBahanData = button.getAttribute('data-bahan');
+            const bahanBahan = document.getElementById('bahanBahan');
+            const bahanArray = JSON.parse(bahanBahanData);
+
+            const namaBahanBahanLainData = button.getAttribute('data-namabahanlain');
+            const namaBahanBahanLain = document.getElementById('namaBahanBahanLain');
+
+            const bahanBahanLainData = button.getAttribute('data-bahanlain');
+            const bahanBahanLain = document.getElementById('bahanBahanLain');
+            const bahanLainArray = JSON.parse(bahanBahanLainData);
+
+            const caraMembuatData = button.getAttribute('data-caramembuat');
+            const caraMembuat = document.getElementById('caraMembuat');
+            const caraMembuatArray = JSON.parse(caraMembuatData);
+
+            bahanBahan.innerHTML = '';
+            bahanArray.forEach(bahan => {
+                bahanBahan.innerHTML += `<li>${bahan}</li>`;
+            });
+
+            namaBahanBahanLain.innerHTML = '';
+            namaBahanBahanLain.innerHTML += `${namaBahanBahanLainData}`;
+            
+            bahanBahanLain.innerHTML = '';
+            bahanLainArray.forEach(bahan => {
+                bahanBahanLain.innerHTML += `<li>${bahan}</li>`;
+            });
+
+            caraMembuat.innerHTML = '';
+            caraMembuatArray.forEach(caramembuat => {
+                caraMembuat.innerHTML += `<li>${caramembuat}</li>`;
+            });
+
+            // GAMBAR
+            const gambarSatuUrl = button.getAttribute('gambar-satu');
+            const gambarDuaUrl = button.getAttribute('gambar-dua');
+
+            document.getElementById('gambarSatu').src = '../img/' + gambarSatuUrl;
+            document.getElementById('gambarDua').src = '../img/' + gambarDuaUrl;
+
+            // Tampilkan modal
+            const modal = document.getElementById('recipeModal');
+            modal.classList.remove('hidden');
+
+            const blurDiv = document.getElementById('blurDiv');
+            blurDiv.classList.add('blur-sm');
+        }
+    
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            const modal = document.getElementById('recipeModal');
+            modal.classList.add('hidden');
+
+            const blurDiv = document.getElementById('blurDiv');
+            blurDiv.classList.remove('blur-sm');
+        }
+    </script>
 </body>
 </html>

@@ -93,8 +93,7 @@
                             $cara_membuat_array = explode('|', $recipe->cara_membuat);
                             $cara_membuat_json = json_encode($cara_membuat_array);
 
-                            
-                            $bahan_bahan_lain_array = explode('|', $recipe->bahan_bahan_lain);
+                            $bahan_bahan_lain_array = !empty($recipe->bahan_bahan_lain) ? explode('|', $recipe->bahan_bahan_lain) : [];
                             $bahan_bahan_lain_json = json_encode($bahan_bahan_lain_array);
 
                         @endphp
