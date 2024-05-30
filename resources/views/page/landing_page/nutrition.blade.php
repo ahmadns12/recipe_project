@@ -72,7 +72,7 @@
                         Ayo sajikan menu sehat dan bernutrisi lainnya, hanya di sini!
                     </div>
                     <div class="flex mt-8">
-                        <a href="" class="bg-[#D9D9D9] font-jockey_one text-3xl text-black px-16 py-2 rounded-full shadow-lg">
+                        <a href="/recipe" class="bg-[#D9D9D9] font-jockey_one text-3xl text-black px-16 py-2 rounded-full shadow-lg">
                             Tampilkan Resep
                         </a>
                     </div>

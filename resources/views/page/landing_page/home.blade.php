@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -161,7 +161,7 @@
             </div>
 
             <div class="pb-12 flex justify-center items-center">
-                <a href="" class="bg-[#D9D9D9] font-jockey_one text-lg text-black px-20 py-1 rounded-full shadow-lg">
+                <a href="/login" class="bg-[#D9D9D9] font-jockey_one text-lg text-black px-20 py-1 rounded-full shadow-lg">
                     Sign In Now
                 </a>
             </div>
@@ -181,22 +181,22 @@
             <div class="bg-[#DEE4B8] bg-opacity-45 py-12">
                 <div class="flex-col">
                     <div class="flex justify-center items-center space-x-12">
-                        <a href="" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
+                        <a href="/recipe/dessert" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
                             Indonesian Dessert
                         </a>
-                        <a href="" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
+                        <a href="/recipe/traditional" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
                             Traditional Food
                         </a>
-                        <a href="" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-12 font-jockey_one">
+                        <a href="/recipe/international" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-12 font-jockey_one">
                             International Food
                         </a>
                     </div>
 
                     <div class="flex justify-center items-center space-x-12 mt-8">
-                        <a href="" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
+                        <a href="/recipe/drink" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
                             Drink or Coffe
                         </a>
-                        <a href="" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
+                        <a href="/recipe/cake" class="bg-[#A3AE73] rounded-[1.25rem] text-black text-2xl py-2 px-8 font-jockey_one">
                             Cake & Sweet
                         </a>
                     </div>
@@ -210,45 +210,51 @@
     {{-- SECTION-4 END --}}
 
     {{-- SECTION-5 TIPS AND TRIK --}}
-    <section class="py-4">
+    <section id="tipstrik" class="py-4">
 
         <div class="w-full text-3xl flex justify-center items-center font-jockey_one">
             Tips And Trik
         </div>
 
         <div class="flex text-white text-lg font-jockey_one justify-center items-center py-4 space-x-12">
-            <div class="bg-[#7B7D67] rounded-xl flex-col">
-                <div class="rounded-xl overflow-hidden">
-                    <img class="w-52 h-40 object-contain" src="{{asset('img/item1.png')}}" alt="">
+            <a href="https://sajiansedap.grid.id/read/103788561/cara-ampuh-mencuci-daging-ayam-supaya-bebas-dari-kuman-dan-bakteri-jangan-harap-bersih-kalau-cuma-direndam-di-baskom?page=all">
+                <div class="bg-[#7B7D67] rounded-xl flex-col">
+                    <div class="rounded-xl overflow-hidden">
+                        <img class="w-52 h-40 object-contain" src="{{asset('img/item1.png')}}" alt="">
+                    </div>
+                    <div class="flex text-center items-center justify-center">
+                        Tips mencuci ayam dengan
+                        <br>
+                        benar dan baik
+                    </div>
                 </div>
-                <div class="flex text-center items-center justify-center">
-                    Tips mencuci ayam dengan
-                    <br>
-                    benar dan baik
-                </div>
-            </div>
+            </a>
 
-            <div class="bg-[#7B7D67] rounded-xl flex-col">
-                <div class="rounded-xl overflow-hidden">
-                    <img class="w-52 h-40 object-contain" src="{{asset('img/item2.png')}}" alt="">
+            <a href="https://www.fimela.com/food/read/3766017/6-cara-agar-daging-nggak-alot-waktu-dimasak-tipsnya-simpel">
+                <div class="bg-[#7B7D67] rounded-xl flex-col">
+                    <div class="rounded-xl overflow-hidden">
+                        <img class="w-52 h-40 object-contain" src="{{asset('img/item2.png')}}" alt="">
+                    </div>
+                    <div class="flex text-center items-center justify-center">
+                        Tips mengolah daging sapi
+                        <br>
+                        agar tidak alot
+                    </div>
                 </div>
-                <div class="flex text-center items-center justify-center">
-                    Tips mengolah daging sapi
-                    <br>
-                    agar tidak alot
-                </div>
-            </div>
+            </a>
 
-            <div class="bg-[#7B7D67] rounded-xl flex-col">
-                <div class="rounded-xl overflow-hidden">
-                    <img class="w-52 h-40 object-contain" src="{{asset('img/item3.png')}}" alt="">
+            <a href="https://www.alodokter.com/amankah-mencuci-buah-dan-sayur-menggunakan-sabun#:~:text=Cuci%20buah%20dan%20sayur%20pada,sikat%20halus%20untuk%20membersihkan%20kulitnya.">
+                <div class="bg-[#7B7D67] rounded-xl flex-col">
+                    <div class="rounded-xl overflow-hidden">
+                        <img class="w-52 h-40 object-contain" src="{{asset('img/item3.png')}}" alt="">
+                    </div>
+                    <div class="flex text-center items-center justify-center">
+                        Tips mencuci buah dan sayur
+                        <br>
+                        agar bisa awet
+                    </div>
                 </div>
-                <div class="flex text-center items-center justify-center">
-                    Tips mencuci buah dan sayur
-                    <br>
-                    agar bisa awet
-                </div>
-            </div>
+            </a>
         </div>
 
     </section>

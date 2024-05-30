@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +73,7 @@
     {{-- SECTION-2 END --}}
 
     {{-- SECTION-3 FAVORITE --}}
-    <section class="py-6">
+    <section id="favorite" class="py-6">
 
         <div class="py-4 bg-bottom" style="background-image: url('{{asset('img/bg_picture2.png')}}')">
             <div class="flex justify-center items-center space-x-4 py-4">
