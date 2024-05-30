@@ -15,34 +15,35 @@
     {{-- HEADER NAVBAR-END --}}
 
     {{-- SECTION-1 CAROUSEL --}}
-    <section class="pt-6 px-4">
+    <section>
 
-        <div class="w-full text-3xl flex justify-center items-center font-jockey_one">
-            Are You Hungry? Let’s Cook!
-        </div>
-
-        <div class="w-full pt-6 px-36">
-            <div class="rounded-3xl flex justify-center items-center px-12 py-8" style="background-image: url('{{asset('img/bg_picture.jpg')}}')">
-                <div class="w-full bg-[#7B7D67] opacity-90 rounded-3xl flex-col justify-center items-center px-12 py-8">
-                    <div class="w-full py-4 opacity-35 bg-[#FFFFFF] rounded-full"></div>
-                    <div class="flex-col py-4">
-                        <div class="w-full text-3xl text-white font-jockey_one">
-                            Delicious Food Is Waiting
-                        </div>
-                        <div class="mt-12 w-full text-sm text-white font-inter">
-                            From the first taste to the last, let our
-                            <br>
-                            culinary creations take you on a
-                            <br>
-                            journey through a world of rich,
-                            <br>
-                            diverse, and delectable flavors.
+        <div class="py-4" style="background-image: url('{{asset('img/bg3.png')}}')">
+            <div class="w-full text-3xl flex justify-center items-center font-jockey_one">
+                Are You Hungry? Let’s Cook!
+            </div>
+    
+            <div class="w-full pt-6 px-36">
+                <div class="rounded-3xl flex justify-center items-center px-12 py-8" style="background-image: url('{{asset('img/bg_picture.jpg')}}')">
+                    <div class="w-full bg-[#7B7D67] opacity-90 rounded-3xl flex-col justify-center items-center px-12 py-8">
+                        <div class="w-full py-4 opacity-35 bg-[#FFFFFF] rounded-full"></div>
+                        <div class="flex-col py-4">
+                            <div class="w-full text-3xl text-white font-jockey_one">
+                                Delicious Food Is Waiting
+                            </div>
+                            <div class="mt-12 w-full text-sm text-white font-inter">
+                                From the first taste to the last, let our
+                                <br>
+                                culinary creations take you on a
+                                <br>
+                                journey through a world of rich,
+                                <br>
+                                diverse, and delectable flavors.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     {{-- SECTION-1 END --}}
 

@@ -14,7 +14,7 @@
                 <li class="transition ease-linear cursor-pointer hover:text-[#6E7732]">UPLOAD</li>
             </a>
         </ul>
-        <ul class="flex space-x-8 pb-1">
+        <ul class="flex space-x-8 pt-1">
             <a href="/login">
                 <i class="fa-solid fa-user text-lg text-black transition ease-linear hover:text-white"></i>
             </a>
