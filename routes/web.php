@@ -40,3 +40,19 @@ Route::get('/recipe', function () {
 Route::get('/recipe/dessert', function () {
     return view('page/recipe_page/recipe_desert');
 });
+
+Route::get('/recipe/traditional', function () {
+    return view('page/recipe_page/recipe_traditional');
+});
+
+Route::get('/recipe/international', function () {
+    return view('page/recipe_page/recipe_international');
+});
+
+Route::get('/recipe/drink', function () {
+    return view('page/recipe_page/recipe_drink');
+});
+
+Route::get('/recipe/cake', function () {
+    return view('page/recipe_page/recipe_cake');
+});

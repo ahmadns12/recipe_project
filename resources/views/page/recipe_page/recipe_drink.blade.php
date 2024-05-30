@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Recipe Dessert | Recipe Project</title>
+    <title>Recipe Drink | Recipe Project</title>
     <link rel="stylesheet" href="{{asset('fontawesome-free-6.5.2-web/css/all.min.css')}}">
     @vite('resources/css/app.css')
 </head>
@@ -121,11 +121,11 @@
                 </div>
                 <div class="w-1/2">
                     <div class="flex justify-center items-center">
-                        <img class="h-[22rem] w-full object-contain" src="{{asset('img/dessert_picture.png')}}" alt="">
+                        <img class="h-[22rem] w-full object-contain" src="{{asset('img/drink_picture.png')}}" alt="">
                     </div>
 
                     <div class="w-full mt-4 text-4xl flex justify-center items-center font-jockey_one">
-                        Indonesian Dessert
+                        Drink
                     </div>
                 </div>
             </div>

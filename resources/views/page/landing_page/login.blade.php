@@ -75,7 +75,7 @@
     {{-- SECTION-3 FAVORITE --}}
     <section class="py-6">
 
-        <div class="w-full bg-[#7B7D67] bg-center rounded-b-full flex-col justify-center items-center">
+        <div class="py-4 bg-bottom" style="background-image: url('{{asset('img/bg_picture2.png')}}')">
             <div class="flex justify-center items-center space-x-4 py-4">
                 <i class="fa-solid fa-heart text-3xl text-black"></i>
                 <span class="text-white text-3xl font-jockey_one">Favorite</span>
