@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RecipeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,29 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// LOGIN
+Route::get('/login', [RecipeController::class,'login_page'])->name('login');
+Route::post('/signup_action', [RecipeController::class,'signup']);
+Route::post('/login_action', [RecipeController::class,'login']);
+Route::get('/logout_action', [RecipeController::class,'logout']);
 
-Route::get('/login', function () {
-    return view('page/landing_page/login');
-});
 
-Route::get('/home', function () {
-    return view('page/landing_page/home');
-});
+Route::get('/home', [RecipeController::class,'home_page']);
+Route::get('/nutrition', [RecipeController::class,'nutrition_page']);
 
-Route::get('/nutrition', function () {
-    return view('page/landing_page/nutrition');
-});
-
-Route::get('/upload', function () {
-    return view('page/landing_page/unggah_resep');
-});
-
-Route::get('/recipe', function () {
-    return view('page/recipe_page/recipe');
-});
+Route::get('/recipe', [RecipeController::class,'recipe_page']);
 
 Route::get('/recipe/dessert', function () {
     return view('page/recipe_page/recipe_desert');
@@ -55,4 +44,8 @@ Route::get('/recipe/drink', function () {
 
 Route::get('/recipe/cake', function () {
     return view('page/recipe_page/recipe_cake');
+});
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/upload', [RecipeController::class,'upload_page']);
 });

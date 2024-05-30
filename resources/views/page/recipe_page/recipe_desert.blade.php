@@ -95,24 +95,24 @@
         <section class="py-6 pt-20">
             <div class="flex w-full space-x-8 px-32">
                 <div class="w-1/2 h-[28rem] no-scrollbar overflow-y-auto">
-                    <div class="grid grid-cols-2 gap-x-44 gap-y-20 mt-12">
+                    <div class="grid grid-cols-2 gap-x-44 gap-y-20 mt-16">
 
                         <a href="">
                             <div class="flex-col items-center justify-center bg-[#A3AE73] rounded-[2rem] py-2 px-4">
                                 <div class="flex justify-center items-center">
-                                    <img class="h-28 w-28 object-contain mt-[-4rem]" src="{{asset('img/food_picture3.png')}}" alt="">
+                                    <img class="mt-[-4rem] rounded-xl overflow-hidden outline outline-[#A3AE73] h-28 w-28 object-cover " src="{{asset('img/recipe_item.png')}}" alt="">
                                 </div>
                                 
-                                <div class="text-2xl font-jockey_one text-white flex justify-center items-center">
+                                <div class="mt-1 text-2xl font-jockey_one text-white flex justify-center items-center">
                                     Pie Buah
                                 </div>
                                 
-                                <div class="pt-2 pb-4 font-jockey_one text-sm text-white text-center">
-                                    Sajian manis dengan
-                                    <br>
-                                    potongan buah di atas
-                                    <br>
-                                    pie kecil yang renyah.
+                                <div class="pt-2 pb-4">
+                                    <div class="font-jockey_one text-sm text-white text-center line-clamp-3">
+                                        Sajian manis dengan
+                                        potongan buah di atas
+                                        pie kecil yang renyahaskjdaksjdkasjdkj.
+                                    </div>
                                 </div>
                             </div>
                         </a>

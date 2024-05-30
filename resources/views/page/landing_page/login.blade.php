@@ -17,11 +17,35 @@
     {{-- SECTION-1 SIGN IN --}}
     <section class="py-6 px-4">
 
+        @auth
         <div class="w-full text-3xl flex justify-center items-center font-jockey_one">
-            Lets Join and Find Another Recipe!
+            Invite Your Friend and Find More Recipe Together!
         </div>
 
-        <form action="">
+        <div class="mt-4 flex justify-center items-center">
+            <a href="/logout_action" class="bg-[#6E7732] mb-[-1rem] font-jockey_one text-2xl text-white px-28 py-2 rounded-full shadow-lg">
+                Logout
+            </a>
+        </div>
+        @endauth
+
+        @guest
+
+        @if ($errors->any())
+            @foreach ($errors->all() as $item)
+                <div class="w-full text-xl flex justify-center items-center font-jockey_one text-red-500">
+                    {{ $item }}
+                </div>
+            @endforeach
+        @endif
+        
+        <div class="w-full text-3xl flex justify-center items-center font-jockey_one">
+            Let's Join and Find Another Recipe!
+        </div>
+        
+
+        <form action="/signup_action" method="POST">
+            @csrf
             <div class="flex-col py-6 px-12">
                 <div class="flex justify-center items-center space-x-12 font-inter py-3">
                     <input class="text-center text-sm rounded-md italic py-3 px-32" type="text" placeholder="First Name" name="first_name" required>
@@ -32,8 +56,12 @@
                     <input class="text-center text-sm rounded-md italic py-3 px-32" type="text" placeholder="Phone Number" name="phone_number" required>
                 </div>
                 <div class="flex justify-center items-center space-x-12 font-inter py-3">
-                    <input class="text-center text-sm rounded-md italic py-3 px-32" type="password" placeholder="Password" name="password" required>
-                    <input class="text-center text-sm rounded-md italic py-3 px-32" type="password" placeholder="Confirm Password" required>
+                    <div class="flex-col">
+                        <input class="text-center text-sm rounded-md italic py-3 px-32" type="password" placeholder="Password" name="password" required>
+                    </div>
+                    <div class="flex-col">
+                        <input class="text-center text-sm rounded-md italic py-3 px-32" type="password" placeholder="Confirm Password" name="password_confirmation" required>
+                    </div>
                 </div>
             </div>
     
@@ -54,7 +82,8 @@
             Already Have An Account?
         </div>
 
-        <form action="">
+        <form action="/login_action" method="POST">
+            @csrf
             <div class="flex-col py-6 px-12">
                 <div class="flex justify-center items-center space-x-12 font-inter py-3">
                     <input class="text-center text-sm rounded-md italic py-3 px-32" type="email" placeholder="E-mail*" name="email" required>
@@ -68,6 +97,7 @@
                 </button>
             </div> 
         </form>
+        @endguest
 
     </section>
     {{-- SECTION-2 END --}}
@@ -86,7 +116,7 @@
                 Click to save.
             </div>
             <div class="flex justify-center items-center">
-                <a href="" class="bg-[#6E7732] mb-[-1rem] font-jockey_one text-2xl text-white px-28 py-2 rounded-full shadow-lg">
+                <a href="/recipe" class="bg-[#6E7732] mb-[-1rem] font-jockey_one text-2xl text-white px-28 py-2 rounded-full shadow-lg">
                     See Recipe
                 </a>
             </div>
